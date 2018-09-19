@@ -37,7 +37,7 @@ http://localhost:8000
 ```
 A *login* screen should be answered to you.
 
-You may now authenticate -- and user Jupyter-notebooks -- with the 
+You may now authenticate -- and use Jupyter-notebooks -- with the 
 default user:
 ```
 Username: user
