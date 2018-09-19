@@ -1,7 +1,7 @@
 # JupyterHub - deauthorized
 
 
-# Build it
+## Build it
 
 To build this (Docker) container just go for:
 
@@ -13,7 +13,7 @@ The image from `continuumio/miniconda3` is inherited, do the
 setup of JupyterHub and Notebook should be a smooth 5 minutes run.
 
 
-# Run it
+## Run it
 
 When you run the image (`myjupyterhub` in this case),
 ```bash
@@ -28,7 +28,7 @@ $ jupyterhub --no-ssl
 Which will start *JupyterHub* at por `8000` (default).
 
 
-# Access it
+## Access it
 
 *JupyterHub* container running, (in your host) go to your browser
 and ask for:
