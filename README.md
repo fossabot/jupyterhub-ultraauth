@@ -9,8 +9,8 @@ To build this (Docker) container just go for:
 $ docker build -t myjupyterhub dockerfile/.
 ```
 
-The image from `continuumio/miniconda3` is inherited, do the
-setup of JupyterHub and Notebook should be a smooth 5 minutes run.
+The image from `continuumio/miniconda3` is inherited, the
+setup of JupyterHub and Notebook should be a smooth 5-minutes run.
 
 
 ## Run it
