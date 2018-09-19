@@ -1,6 +1,6 @@
-FROM continuumio:miniconda3
+FROM continuumio/miniconda3
 
-RUN conda install -y -c conda-forge jupyterhub \
+RUN conda install -y -c conda-forge jupyterhub &&\
     conda install -y notebook
 
 
