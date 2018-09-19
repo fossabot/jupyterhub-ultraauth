@@ -17,7 +17,7 @@ setup of JupyterHub and Notebook should be a smooth 5 minutes run.
 
 When you run the image (`myjupyterhub` in this case),
 ```bash
-$ docker run -it -p 8000:8000 myjupyterhub
+$ docker run --rm -it -p 8000:8000 myjupyterhub
 ```
 , you'll then be sitting inside the container as `root` (default).
 
@@ -31,8 +31,18 @@ Which will start *JupyterHub* at por `8000` (default).
 # Access it
 
 *JupyterHub* container running, (in your host) go to your browser
-and ask for `http://localhost:8000`.
+and ask for:
+```
+http://localhost:8000
+```
 A *login* screen should be answered to you.
+
+You may now authenticate -- and user Jupyter-notebooks -- with the 
+default user:
+```
+Username: user
+Password: 123456
+```
 
 
 /.\
