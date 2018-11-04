@@ -47,3 +47,12 @@ Password: 123456
 
 /.\
 
+## Demo Steps:
+
+- 1. Run docker container
+- 2. Review config.yaml 
+- 3. Create UltraAuth Application (access id / secret)
+- 4. Update config.yaml
+- 5. Update UltraAuth Application settings with JupyterHub instance oauth_callback / oauth_logout
+- 6. Authenticate using UltraAuth
+
