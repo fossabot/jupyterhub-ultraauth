@@ -4,8 +4,8 @@ from oauthenticator.github import LocalGitHubOAuthenticator
 
 c.JupyterHub.authenticator_class = LocalGitHubOAuthenticator
 
-CLIENT_ID = os.environ('GITHUB_CLIENT_ID')
-CLIENT_SECRET = os.environ('GITHUB_CLIENT_SECRET')
+CLIENT_ID = os.environ['GITHUB_CLIENT_ID']
+CLIENT_SECRET = os.environ['GITHUB_CLIENT_SECRET']
 
 c.LocalGitHubOAuthenticator.client_id = CLIENT_ID
 c.LocalGitHubOAuthenticator.client_secret = CLIENT_SECRET

@@ -63,9 +63,21 @@ The figure below shows pretty much my setup.
 After creating the App, the site will give you an `Client ID` and `Client Secret`,
 those values we have to define as variables `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`
 in our container's environment. Those variables will be read by our *config.py* when
-we start the service:
+we start the service.
 
+### Run commands
+
+To make it as clear as possible how we get our JupyterHub container running and
+using the GitHub authentication system, let's review the commands.
+It is supposed that the container (`./dockerfile/Dockerfile`) images is named `myjupyterhub`
+and we are running it from inside this repository/directory.
+
+Run the container sharing the current working directory through `/work` inside the container:
 ```bash
+$ docker run --rm -it -p 8000:8000 -v $PWD:/work myjupyterhub
+$ cd /work
+$ export GITHUB_CLIENT_ID='xxxxxxxxxxxxxxxxxxxx'
+$ export GITHUB_CLIENT_SECRET='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 $ jupyterhub -f jupyterhub_config_github.py
 ```
 
