@@ -1,7 +1,9 @@
 # JupyterHub - deauthorized
 
 
-## Build it
+## Setup the container
+
+### Building it
 
 To build this (Docker) container just go for:
 
@@ -13,7 +15,7 @@ The image from `continuumio/miniconda3` is inherited, the
 setup of JupyterHub and Notebook should be a smooth 5-minutes run.
 
 
-## Run it
+### Running it
 
 When you run the image (`myjupyterhub` in this case),
 ```bash
@@ -21,28 +23,33 @@ $ docker run --rm -it -p 8000:8000 myjupyterhub
 ```
 , you'll then be sitting inside the container as `root` (default).
 
+
+## Run the App
+
+### Local (PAM) authentication
+
 Run *JupyterHub* as:
 ```bash
-$ jupyterhub --no-ssl
+$ jupyterhub
 ```
-Which will start *JupyterHub* at por `8000` (default).
 
-
-## Access it
-
-*JupyterHub* container running, (in your host) go to your browser
-and ask for:
-```
-http://localhost:8000
-```
-A *login* screen should be answered to you.
-
-You may now authenticate -- and use Jupyter-notebooks -- with the
-default user:
+And it will start JupyterHub at por `8000` (default).
+In our container we had created an user:
 ```
 Username: user
 Password: 123456
 ```
+
+Which we will use to authenticate in the app, available at:
+```
+http://localhost:8000
+```
+A *login* screen should come to you, for `username` and `password`.
+
+### OAuthentication
+
+JupyterHub provides an interface to authenticate users through an external
+OAuth authentication system.
 
 ## UltraAuth authentication
 
