@@ -44,6 +44,17 @@ Username: user
 Password: 123456
 ```
 
+## UltraAuth authentication
+
+Run the container sharing the current working directory through `/work` inside the container:
+```bash
+$ docker run --rm -it -p 8000:8000 -v $PWD:/work myjupyterhub
+$ cd /work
+$ export ULTRAAUTH_CLIENT_ID='xxxxxxxxxxxxxxxxxxxx'
+$ export ULTRAAUTH_CLIENT_SECRET='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+$ jupyterhub -f jupyterhub_config_ultraauth.py
+```
+
 ## GitHub authentication
 
 To authenticate using GitHub is a pretty straightforward process.

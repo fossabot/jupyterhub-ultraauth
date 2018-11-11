@@ -1,0 +1,8 @@
+
+export OAUTH2_AUTHORIZE_URL="https://srv.qryp.to/op/auth?scope=openid email address profile"
+export OAUTH2_TOKEN_URL='https://srv.qryp.to/op/token'
+export OAUTH2_USERDATA_URL='https://srv.qryp.to/op/me'
+export OAUTH_CLIENT_ID='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+export OAUTH_CLIENT_SECRET='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+export OAUTH_CALLBACK_URL='https://ffdef346.ngrok.io/hub/oauth_callback'
+#export OAUTH2_USERNAME_KEY="email"
