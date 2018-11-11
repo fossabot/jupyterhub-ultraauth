@@ -97,11 +97,20 @@ and ready to authenticate using GitHub.
 
 /.\
 
-## Demo Steps:
+## UltraAuth
 
-- 1. Run docker container
-- 2. Review config.yaml
-- 3. Create UltraAuth Application (access id / secret)
-- 4. Update config.yaml
-- 5. Update UltraAuth Application settings with JupyterHub instance oauth_callback / oauth_logout
-- 6. Authenticate using UltraAuth
+To authenticate using the UltraAuth service we used OAuthenticator environment variables,
+that is connect to a infinite redirection loop which we got in.
+
+Those are the variable we defined:
+```
+export OAUTH2_AUTHORIZE_URL="https://srv.qryp.to/op/auth?scope=openid email address profile"
+export OAUTH2_TOKEN_URL='https://srv.qryp.to/op/token'
+export OAUTH2_USERDATA_URL='https://srv.qryp.to/op/me'
+export OAUTH_CLIENT_ID='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+export OAUTH_CLIENT_SECRET='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+export OAUTH_CALLBACK_URL='https://jupyterhub.example.com/hub/oauth_callback'
+```
+
+The values for `token`, `authorize` and `userdata` URLs, as well as available
+auth types are provided by UltraAuth itself, from inside the user space.
