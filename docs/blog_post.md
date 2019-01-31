@@ -1,6 +1,42 @@
-# Log in JupyterHub through UltraAuth facial/biometric authentication system
 
-UltraAuth provides an OpenID iterface to authenticate users in its biometric database.
+# Biometric Authentication for Notebooks via UltraAuth
+
+
+## Notebook what?! (for those late to the game...)
+
+Notebooks, like those provided by Jupyter/JupyterHub, are web-based interactive programming tools which provide the ability to mix executable code with Markdown-formatted text.
+
+This browser-based programming abstraction supports most major languages (https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
+
+Notebooks are also popular in the Finance and Energy sectors and have become a core tool of the next-gen Data Scientists replacing Sas / MS Excel workflows.
+
+Data-nerds / analysts love notebooks because they allow for:
+- quick iteration on code
+- easy visualization of output
+- self-contained documentation
+- standarized interface between analysts / developers
+
+Notebooks also have the ability to convert to other formats like reveal.js slides or html pages.
+
+## How can you make notebooks more secure?
+
+Notebooks work by sending snippets of code from the browser to a notebook-server which executes the snippet and returns the result.
+
+Since the notebook allows for execution of arbitrary code on the notebook-server, notebook access must be limited to only trusted users.
+
+JupyterHub provides a hook for custom authentication which overrides the default username/password method.
+
+UltraAuth provides a strong-security option for JupyterHub via Biometric-based authentication (e.g. facial recognition, fingerprint).
+
+
+
+otebook servers can potentially give root access to outside users.
+
+require an extra level of security which biometrics For JupyterHub users who require the most secure notebooks, Ultra
+
+Integration biometric-based authentication (facial / fingerprint 
+
+an OpenID iterface to authenticate users in its biometric database.
 So the idea here is to workout the OAuth client interface provided by JupyterHub
 to authenticate through UltraAuth.
 
