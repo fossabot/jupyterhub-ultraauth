@@ -77,6 +77,7 @@ callback URL.
 
 The figure below shows pretty much my setup.
 ![GitHub Oauth App settings](github_oauth_app_settings.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fultraauth%2Fjupyterhub-ultraauth.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fultraauth%2Fjupyterhub-ultraauth?ref=badge_shield)
 
 After creating the App, the site will give you an `Client ID` and `Client Secret`,
 those values we have to define as variables `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`
@@ -121,3 +122,7 @@ export OAUTH_CALLBACK_URL='https://jupyterhub.example.com/hub/oauth_callback'
 
 The values for `token`, `authorize` and `userdata` URLs, as well as available
 auth types are provided by UltraAuth itself, from inside the user space.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fultraauth%2Fjupyterhub-ultraauth.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fultraauth%2Fjupyterhub-ultraauth?ref=badge_large)
